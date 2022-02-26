@@ -52,7 +52,7 @@
 ## 다형성
 > 오버라이딩
 
-![polymorphism](https://user-images.githubusercontent.com/38900338/155843322-a424312b-707c-468e-a625-0658325fab20.jpg)
+<img src="https://user-images.githubusercontent.com/38900338/155843322-a424312b-707c-468e-a625-0658325fab20.jpg" width="70%" />
 
 * 인터페이스를 구현한 객체를 `실행 시점에 유연하게 변경` 가능
 * Service: 클라이언트, Repository: 서버
