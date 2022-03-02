@@ -5,7 +5,16 @@
 
 > Windows 기준
 
-* `generate`: Alt + Insert
-  * 생성자, getter, setter, toString() 등 생성 가능
-* 세미콜론까지 `자동 완성`: Ctrl + Shift + Enter
+#### `generate`: Alt + Insert
+* 생성자, getter, setter, toString() 등 생성 가능
 
+#### 세미콜론까지 `자동 완성`: Ctrl + Shift + Enter
+
+#### test 파일 생성: Ctrl + Shift + T
+* Create New Test > Testing library: JUnit5 <br>
+                  > Class name: 기존 이름 + Test
+
+#### Static Import: Alt + Enter
+* Add ondemend static import 
+
+#### 소스 정의 이동: Ctrl + B
