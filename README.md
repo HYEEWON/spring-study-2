@@ -9,4 +9,5 @@
 ## 목차
 
 * [객체 지향과 스프링](https://github.com/HYEEWON/spring-study-3/blob/main/oop-and-spring/oop.md)
+* [관심사 분리](https://github.com/HYEEWON/spring-study-3/blob/main/project/appconfig.md)
 * [Intellij 사용 방법](https://github.com/HYEEWON/spring-study-3/blob/main/project/intellij.md)
