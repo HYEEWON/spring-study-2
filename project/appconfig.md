@@ -75,13 +75,17 @@ public class OrderServiceImpl implements OrderService {
 ### 👉 실행
 
 ```java
-public class MemberApp {
+public class OrderApp {
 
     public static void main(String[] args) {
-        AppConfig appConfig = new AppConfig();
-        MemberService memberService = appConfig.memberService();
 
-        // Member 객체 생성 및 MemberService 메소드 실행
+        // AppConfig로 객체 생성
+        AppConfig appConfig = new AppConfig();
+
+        MemberService memberService = appConfig.memberService();
+        OrderService orderService = appConfig.orderService();
+        
+        // Member, Order 객체 생성 및 OrderService 메소드 실행
     }
 }
 
