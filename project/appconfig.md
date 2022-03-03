@@ -71,7 +71,7 @@ public class OrderServiceImpl implements OrderService {
 
 * `OrderServiceImpl` 입장에서 `의존 관계는 외부에서 주입`되어 `실행에만 집중`
 
-> DIP 유지: 인터페이스에만 의존
+> DIP 유지: 인터페이스에만 의존 <br>
 > OCP 준수: 구현체는 AppConfig에서 변경하여 클라이언트(Impl)의 코드 변경 없음
 
 <br>
