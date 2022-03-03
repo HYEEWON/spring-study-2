@@ -18,3 +18,5 @@
 * Add ondemend static import 
 
 #### 소스 정의 이동: Ctrl + B
+
+#### Extract Method: Ctrl + Alt + M
