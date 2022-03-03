@@ -33,12 +33,22 @@ public class OrderServiceImpl implements OrderService {
 
 ```java
 public class AppConfig {
-    public OrderService orderService() { 
-        // OrderServiceImpl은에 주입될 객체를 외부(AppConfig)에서 결정
-        return new OrderServiceImpl(new MemoryMemberRepository(), new MemberOrderPolicy());
+    
+    // OrderServiceImpl은에 주입될 객체를 외부(AppConfig)에서 결정
+    public OrderService orderService() {
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
-}
 
+    // 구현체 정의
+    private MemberRepository memberRepository() {
+        return new MemoryMemberRepository();
+    }
+
+    public DiscountPolicy discountPolicy() {
+        return new FixDiscountPolicy();
+    }
+    
+}
 ```
 
 * `AppConfig`는 `MemoryMemberRepository` 객체, `MemberOrderPolicy` 객체를 생성하고, 이 참조 값을 `OrderServiceImpl`을 생성하면서 생성자로 전달
@@ -59,12 +69,15 @@ public class OrderServiceImpl implements OrderService {
 }
 ```
 
-* `OrderServiceImple` 입장에서 `의존 관계는 외부에서 주입`되어 `실행에만 집중`
+* `OrderServiceImpl` 입장에서 `의존 관계는 외부에서 주입`되어 `실행에만 집중`
 
+> DIP 유지: 인터페이스에만 의존
+> OCP 준수: 구현체는 AppConfig에서 변경하여 클라이언트(Impl)의 코드 변경 없음
+
+<br>
 
 ### 👉 DI(Dependency Injection, 의존관계 주입, 의존성 주입)
 * 클라이언트 `OrderServiceImple` 입장에서 보면 의존 관계를 외부에서 주입
-
 
 ### 👉 관심사 분리
 
