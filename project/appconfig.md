@@ -10,19 +10,20 @@
 
 ## 관심사 분리의 필요성
 
-> DIP, OCP 위반
+> SRP, DIP, OCP 위반
 > 의존 관계와 실행 모두를 진행하는 코드
 
 ```java
 public class OrderServiceImpl implements OrderService {
-
-    // DIP 위반: 인터페이스와 구현체 모두에 의존
-    // OCP 위반: 구현 수정을 위해서는 소스 수정 필요
     private final MemberRepository memberRepository = new MemoryMemberRepository();
     private final OrderPolicy orderPolicy = new MemberOrderPolicy();
 }
 
 ```
+
+* SRP 위반: 구현 객체 생성 및 연결, 실행하는 역할 수행
+* DIP 위반: 인터페이스와 구현체 모두에 의존
+* OCP 위반: 구현 수정을 위해서는 소스 수정 필요
 
 <br>
 
@@ -36,7 +37,7 @@ public class AppConfig {
     
     // OrderServiceImpl은에 주입될 객체를 외부(AppConfig)에서 결정
     public OrderService orderService() {
-        return new OrderServiceImpl(memberRepository(), discountPolicy());
+        return new OrderServiceImpl(memberRepository(), orderPolicy ());
     }
 
     // 구현체 정의
@@ -44,8 +45,8 @@ public class AppConfig {
         return new MemoryMemberRepository();
     }
 
-    public DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+    public DiscountPolicy orderPolicy() {
+        return new MemberOrderPolicy();
     }
     
 }
