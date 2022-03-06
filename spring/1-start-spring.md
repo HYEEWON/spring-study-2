@@ -37,6 +37,8 @@ public class AppConfig {
 * 스프링 컨테이너에 스프링 빈으로 등록
 * 스프링 빈은 private이나 final이 아니어야 함
 
+<br>
+
 ## MainApp
 ```java
 public class OrderApp {
