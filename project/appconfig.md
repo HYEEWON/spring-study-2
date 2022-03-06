@@ -77,14 +77,21 @@ public class OrderServiceImpl implements OrderService {
 
 <br>
 
-### 👉 DI(Dependency Injection, 의존관계 주입, 의존성 주입)
-* 클라이언트 `OrderServiceImple` 입장에서 보면 의존 관계를 외부에서 주입
+### 👉 IoC (Inversion of Control, 제어의 역전)
+
+> AppConfig가 구현 객체를 생성하고 실행함
+> ServiceImpl은 로직 실행에만 집중, 어떤 객체가 실행되는지 모름
+
+* `AppConfig`가 `OrderServiceImpl`을 생성하고 구현 객체를 결정함
+
+### 👉 DI (Dependency Injection, 의존관계 주입, 의존성 주입)
+* 클라이언트 `OrderServiceImpl` 입장에서 보면 의존 관계를 외부에서 주입
 
 ### 👉 관심사 분리
 
 > Impl은 의존 관계에 대한 설정을 하지 않고, 실행에만 집중
 
-* 주입되는 객체를 외부(AppConfig)에서 결정함
+* 주입되는 객체를 외부(`AppConfig`)에서 결정함
 
 ### 👉 실행
 
