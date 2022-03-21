@@ -19,4 +19,4 @@
 ## 기타
 
 * [Intellij 사용 방법](https://github.com/HYEEWON/spring-study-3/blob/main/project/intellij.md)
-* [스프링 설정](https://github.com/HYEEWON/spring-study-3/blob/main/project/spring.md)
+* [스프링 설정](https://github.com/HYEEWON/spring-study-2/blob/main/project/spring.md)
