@@ -81,8 +81,9 @@ System.out.println("bean = " + bean.getClass());
 // bean = class hello.core.AppConfig$$EnhancerBySpringCGLIB$$6245315a
 ```
 
-* `AppConfig`가 아닌 `AppConfig$$EnhancerBySpringCGLIB` 이 출력
-* ** `CGLIB`를 사용해서 AppConfig 클래스를 `상속`받은 임의의 클래스를 만들고, 이 클래스를 스프링 빈으로 등록 **
+> `AppConfig`가 아닌 `AppConfig$$EnhancerBySpringCGLIB` 이 출력 <br>
+> `CGLIB`를 사용해서 AppConfig 클래스를 `상속`받은 임의의 클래스를 만들고, 이 클래스를 스프링 빈으로 등록
+
 * CGLIB: 바이트코드를 조작해서 동적으로 클래스를 생성하는 기술을 제공하는 라이브러리
 * `AppConfig@CGLIB`는 AppConfig의 자식 타입이므로, AppConfig 타입으로 조회 가능
 
