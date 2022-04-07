@@ -68,6 +68,8 @@ public class StatefulService {
 }
 ```
 
+<br>
+
 ## @Configuration과 바이트 조작
 
 * `@Configuration`이 붙은 클래스도 스프링 빈
