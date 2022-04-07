@@ -41,8 +41,8 @@ public class SingletonService {
 * 싱글톤 레지스트리: 싱글톤 객체를 생성하고 관리하는 기능
 
 ```java
+// 호출할 때 마다 같은 객체를 반환
 SingletonService singletonService1 = SingletonService.getInstance();
-//2. 조회: 호출할 때 마다 같은 객체를 반환
 SingletonService singletonService2 = SingletonService.getInstance();
 ```
 
