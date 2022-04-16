@@ -15,6 +15,7 @@
 * [스프링 컨테이너와 스프링 빈](https://github.com/HYEEWON/spring-study-2/blob/main/spring/spring-container-bean.md)
 * [스프링 빈 확인(출력)](https://github.com/HYEEWON/spring-study-2/blob/main/spring/print-spring-bean.md)
 * [싱글톤 컨테이너](https://github.com/HYEEWON/spring-study-2/blob/main/spring/singleton.md)
+* [컴포넌트 스캔과 의존 관계 주입](https://github.com/HYEEWON/spring-study-2/blob/main/spring/component-scan-and-di.md)
 
 <br>
 
