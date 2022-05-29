@@ -7,6 +7,10 @@
 * [스프링 컨테이너와 빈 사용](#스프링-컨테이너와-빈-사용)
 * [스프링 컨테이너 정리](#스프링-컨테이너-정리)
 * [스프링 빈 정리](#스프링-빈-정리)
+* [BeanFactory](#beanfactory)
+* [ApplicationContext](#applicationcontext)
+* [BeanDefinition](#beandefinition)
+
 <br>
 
 ## 스프링 컨테이너와 빈 생성
@@ -117,3 +121,36 @@ Creating shared instance of singleton bean 'orderPolicy'
 * DI Container에 의해 관리되는 POJO(Plain Old Java Object)
 * 스프링 빈의 이름: `@Bean`이 붙은 메서드의 이름
 * 스프링 빈 탐색: ApplicationContext.getBean("이름", 형식);
+
+<br>
+
+## BeanFactory
+* 스프링 컨테이너의 최상의 인터페이스
+* 스프링 빈을 관리 및 조회
+
+<br>
+
+## ApplicationContext
+* `BeanFactory`의 모든 기능을 `상속`받음
+* BeanFactory + 부가 기능
+
+### 부가 기능
+* MessageSource를 이용한 국제화 기능
+* 환경 변수: 로컬/개발/운영 등을 구분
+* 애플리케이션 이벤트: 이벤트 발행 및 구독
+* 편리한 리소스 조회: 파일/클래스패스 등 리소스를 편리하게 조회
+
+<br>
+
+## BeanDefinition
+* 스프링 빈 설정 메타 정보
+* 스프링은 설정 정보를 `BeanDefinition`으로 `추상화`해서 사용
+* 스프링 컨테이너는 자바 코드인지 XML인지 모름
+* `@Bean`, `<bean>`은 하나의 메타 정보가 됨
+* 스프링 컨테이너는 이 메타정보를 기반으로 스프링 빈 생성
+
+### 과정
+* `AnnotationConfigApplicationContext`는 `AnnotatedBeanDefinitionReader` 를 사용해 `AppConfig.class` 를 읽어 `BeanDefinition` 생성
+* `GenericXmlApplicationContext`는 `XmlBeanDefinitionReader`를 사용해 `appConfig.xml` 정보를 읽어 `BeanDefinition` 생성
+
+> 새로운 형식의 설정 정보가 추가되면, `XxxBeanDefinitionReader`를 만들어 `BeanDefinition`을 생성
