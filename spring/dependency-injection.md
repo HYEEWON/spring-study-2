@@ -8,6 +8,18 @@
 * 생성자 호출시점에 딱 1번 호출되는 것을 보장
 * 주로 `불변`, `필수` 의존관계에 사용
 
+```java
+@Component
+public class SempleServiceImpl implements SempleService {
+  private SempleRepository sempleRepository;
+
+  @Autowired
+  public SempleServiceImpl(SempleRepository sempleRepository) {
+    this.sempleRepository = sempleRepository;
+  }
+}
+```
+
 <br>
 
 ## Setter(수정자) 주입
@@ -50,4 +62,22 @@ public class SempleServiceImpl implements SempleService {
 <br>
 
 ## 일반 메서드 주입
+* 일반 메서드를 통해서 주입
+* 한번에 여러 필드를 주입 받을 수 있음
+* 일반적으로 잘 사용하지 않음
+  * Setter 주입과 비슷해서 잘 사용하지 않음
+
+
+```java
+@Component
+public class SempleServiceImpl implements SempleService {
+  private SempleRepository sempleRepository;
+
+  @Autowired
+  public void normalMethod(SempleRepository sempleRepository) {
+    this.sempleRepository = sempleRepository;
+  }
+}
+```
+
 
