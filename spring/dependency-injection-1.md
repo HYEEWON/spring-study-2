@@ -233,7 +233,7 @@ public class OrderServiceImpl implements OrderService {
 // build.gradle
 
 dependencies {
-	//lombok 라이브러리 추가
+	// lombok 라이브러리 추가
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testCompileOnly 'org.projectlombok:lombok'
@@ -241,7 +241,7 @@ dependencies {
 }
 ```
 
-* Settings(Preference)에서 `Annotation Processors` 설정
+* Settings(Preferences)에서 `Annotation Processors` 설정
   * `Enable annotation processing` 체크
 
 ### 최신 트랜드
