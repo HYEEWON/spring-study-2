@@ -71,3 +71,7 @@ public class AutoAppConfig { }
 ### @Configuration
 * 스프링 설정 정보에서 사용
 * 스프링 설정 정보로 인식하고, 스프링 빈이 싱글톤을 유지하도록 추가 처리 진행
+
+### @RequiredArgsConstructor
+* lombok 라이브러리의 어노테이션
+* `final`이 붙은 필드로 생성자를 자동으로 생성
