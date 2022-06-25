@@ -18,6 +18,8 @@
 * [컴포넌트 스캔과 의존 관계 주입](./spring/component-scan-and-di.md)
 * [의존관계 주입: 3가지 방법](./spring/dependency-injection.md)
 * [의존관계 주입에서 발생하는 문제와 해결 방법](./spring/dependency-injection-2.md)
+* [빈 생명주기와 콜백](./spring/bean-lifecycle-callback.md)
+* [빈 스코프](./spring/bean-scope.md)
 
 <br>
 
