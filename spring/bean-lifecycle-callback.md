@@ -113,7 +113,7 @@ public class NetworkClient{
 ```
 
 * `javax.annotation.*`: 스프링이 아니라 자바 표준 
-* 단점: 외부 라이브러리에는 적용하지 못하
+* 단점: 외부 라이브러리에는 적용하지 못함
 
 <br>
 
