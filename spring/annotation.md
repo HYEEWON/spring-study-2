@@ -75,3 +75,19 @@ public class AutoAppConfig { }
 ### @RequiredArgsConstructor
 * lombok 라이브러리의 어노테이션
 * `final`이 붙은 필드로 생성자를 자동으로 생성
+
+### @Qualifier
+* 의존관계 주입에서 추가 구분자를 붙이는 방법
+* `@Autowired`에서 여러 빈이 매칭되면 `@Qualifier`로 지정된 이름의 빈이 매칭
+* 주입시 추가적인 방법을 제공하는 것이지 빈 이름을 변경하는 것이 아님
+* `@Qualifier`로 빈을 찾지 못하면 `NoSuchBeanDefinitionException` 발생
+
+### @Primary
+* 의존관계 주입에서 주입할 빈의 `우선순위`를 정하는 방법
+* `@Autowired`에서 여러 빈이 매칭되면 `@Primary`가 있는 빈이 매칭됨
+
+### @PostConstruct
+* 빈 생명주기에서 의존관계 주입 후에 초기화하는 메서드
+
+### @PreDestroy
+* 빈 생명주기에서 컨테이너 종료전에 호출되는 메서드
