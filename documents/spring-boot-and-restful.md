@@ -3,7 +3,7 @@
 <br>
 
 ## 목차
-* [Web Service & Web Application](#web-service-web-application)
+* [Web Service & Web Application](#web-service--web-application)
 * [Spring Boot로 개발하는 RESTful Service](#spring-boot로-개발하는-restful-service)
 * [User Service API 구현](#user-service-api-구현)
 * [RESTful Service 기능 확장](#restful-service-기능-확장)
